@@ -5,7 +5,7 @@ import { BookOpen, Layers, Route as RouteIcon, Zap, ArrowRight, User, ShoppingCa
 import { Link as RouterLink } from 'react-router-dom'
 
 export default function Home({ onAddToCart }) {
-  const [demoName, setDemoName] = useState('Sarah Developer')
+  const [demoName, setDemoName] = useState('Farman Developer')
   const [demoCount, setDemoCount] = useState(1)
 
   return (
@@ -77,9 +77,7 @@ export default function Home({ onAddToCart }) {
         <div className="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 backdrop-blur-sm space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-4">
             <div>
-              <span className="text-[10px] font-mono uppercase text-indigo-400 bg-indigo-500/10 px-2.5 py-0.5 rounded-full border border-indigo-500/20">
-                Below Section • Interactive Cards
-              </span>
+
               <h3 className="text-lg font-bold text-white mt-1">Quick Live Card Examples</h3>
             </div>
             <RouterLink to="/props" className="text-xs text-indigo-400 hover:text-indigo-300 font-semibold flex items-center gap-1">

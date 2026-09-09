@@ -6,7 +6,7 @@ export default function PropsPage({ onAddToCart }) {
   const [copiedExample, setCopiedExample] = useState(null)
 
   // Interactive Live Card State
-  const [name, setName] = useState('Alex')
+  const [name, setName] = useState('Farman')
   const [role, setRole] = useState('Developer')
 
   const copyCode = (code, id) => {

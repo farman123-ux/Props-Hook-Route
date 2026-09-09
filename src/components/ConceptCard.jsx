@@ -29,7 +29,7 @@ export default function ConceptCard({ title, description, icon: Icon, badge, lin
     }
   }
 
-  const theme = colorMap[color] || colorMap.cyan
+  const theme = colorMap[color] || colorMap.purple
 
   return (
     <div className={`flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 backdrop-blur-sm transition-all duration-300 ${theme.border} hover:shadow-2xl hover:-translate-y-1 group`}>
@@ -66,14 +66,6 @@ export default function ConceptCard({ title, description, icon: Icon, badge, lin
             ))}
           </ul>
         )}
-
-        {/* Code Snippet Box */}
-        {codeSnippet && (
-          <div className="mb-6 p-3.5 bg-slate-950 rounded-2xl border border-slate-800 text-xs font-mono text-slate-300 overflow-x-auto">
-            <pre><code>{codeSnippet}</code></pre>
-          </div>
-        )}
-
       </div>
 
       {/* Buttons: Add to Cart + Learn More */}
