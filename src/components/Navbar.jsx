@@ -96,7 +96,7 @@ export default function Navbar({ notifications = [], setNotifications }) {
                 }`
               }
             >
-              <RouteIcon className="w-3.5 h-3.5" /> Routes
+             Routes
             </NavLink>
           </nav>
 
@@ -117,17 +117,6 @@ export default function Navbar({ notifications = [], setNotifications }) {
                   }}
                   className="w-36 sm:w-56 pl-8 pr-7 py-1 text-xs bg-slate-900 border border-slate-700 rounded-xl text-white focus:outline-none focus:border-indigo-500"
                 />
-                {searchQuery && (
-                  <button
-                    onClick={() => {
-                      setSearchQuery('')
-                      setIsSearchOpen(false)
-                    }}
-                    className="absolute right-2 text-slate-400 hover:text-white"
-                  >
-                    <X className="w-3 h-3" />
-                  </button>
-                )}
               </div>
 
               {/* Search Results Dropdown */}
@@ -164,11 +153,6 @@ export default function Navbar({ notifications = [], setNotifications }) {
                 className="p-2 text-slate-300 hover:text-white bg-slate-900 rounded-xl border border-slate-800 flex items-center gap-1"
               >
                 <Bell className="w-4 h-4 text-indigo-400" />
-                {notifications.length > 0 && (
-                  <span className="px-1.5 py-0.2 bg-indigo-600 text-[10px] font-bold text-white rounded-full">
-                    {notifications.length}
-                  </span>
-                )}
               </button>
 
               {/* Notifications Popover */}
