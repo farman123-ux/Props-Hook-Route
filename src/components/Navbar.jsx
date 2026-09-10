@@ -150,9 +150,14 @@ export default function Navbar({ notifications = [], setNotifications }) {
             <div className="relative">
               <button
                 onClick={() => setIsNotificationOpen(!isNotificationOpen)}
-                className="p-2 text-slate-300 hover:text-white bg-slate-900 rounded-xl border border-slate-800 flex items-center gap-1"
+                className="p-2 text-slate-300 hover:text-white bg-slate-900 rounded-xl border border-slate-800 flex items-center gap-1 relative"
               >
                 <Bell className="w-4 h-4 text-indigo-400" />
+                {notifications.length > 0 && (
+                  <span className="absolute -top-1.5 -right-1.5 w-4 h-4 flex items-center justify-center bg-rose-500 text-white text-[9px] font-bold rounded-full border border-slate-900 shadow-sm">
+                    {notifications.length}
+                  </span>
+                )}
               </button>
 
 
