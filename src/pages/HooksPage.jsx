@@ -5,10 +5,10 @@ import { Link as RouterLink } from 'react-router-dom'
 export default function HooksPage({ onAddToCart }) {
   const [copiedExample, setCopiedExample] = useState(null)
 
-  // Demo 1: useState
+
   const [count, setCount] = useState(0)
 
-  // Demo 2: useEffect
+
   const [seconds, setSeconds] = useState(0)
   const [isRunning, setIsRunning] = useState(false)
 
@@ -53,12 +53,12 @@ function Header() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10 bg-slate-950 text-slate-100">
       
-      {/* Back button */}
+
       <RouterLink to="/" className="inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-white font-medium">
         <ArrowLeft className="w-3.5 h-3.5" /> Back to Home
       </RouterLink>
 
-      {/* Header */}
+
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="space-y-2">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 text-xs font-semibold">
@@ -77,7 +77,7 @@ function Header() {
         )}
       </div>
 
-      {/* Simple Definition */}
+
       <section className="p-5 rounded-2xl bg-slate-900/80 border border-emerald-500/30 space-y-1 backdrop-blur-sm">
         <h2 className="text-base font-bold text-emerald-300">What are Hooks?</h2>
         <p className="text-xs text-slate-200 leading-relaxed">
@@ -85,13 +85,13 @@ function Header() {
         </p>
       </section>
 
-      {/* Exactly Two Super Simple Examples */}
+
       <section className="space-y-5">
         <h2 className="text-xl font-bold text-white">Two Simple Examples</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           
-          {/* Example 1 */}
+
           <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-bold text-emerald-400">1. useState Hook</h3>
@@ -110,7 +110,7 @@ function Header() {
             </div>
           </div>
 
-          {/* Example 2 */}
+
           <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-bold text-emerald-400">2. useEffect Hook</h3>
@@ -132,7 +132,7 @@ function Header() {
         </div>
       </section>
 
-      {/* Clean Interactive Demo */}
+
       <section className="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-5">
         <div className="border-b border-slate-800 pb-3 flex items-center justify-between">
           <div>
@@ -155,7 +155,7 @@ function Header() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           
-          {/* useState Demo */}
+
           <div className="p-5 rounded-xl bg-slate-950 border border-slate-800 space-y-3 text-center">
             <h3 className="text-xs font-bold text-emerald-400">useState Counter</h3>
             <div className="text-2xl font-mono font-bold text-emerald-400">{count}</div>
@@ -175,7 +175,7 @@ function Header() {
             </div>
           </div>
 
-          {/* useEffect Demo */}
+
           <div className="p-5 rounded-xl bg-slate-950 border border-slate-800 space-y-3 text-center">
             <h3 className="text-xs font-bold text-emerald-400">useEffect Timer</h3>
             <div className="text-2xl font-mono font-bold text-emerald-400">{seconds}s</div>

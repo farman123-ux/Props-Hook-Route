@@ -7,7 +7,7 @@ import PropsPage from './pages/PropsPage'
 import HooksPage from './pages/HooksPage'
 import RoutesPage from './pages/RoutesPage'
 
-// Scroll to top automatically when changing routes
+
 function ScrollToTop() {
   const { pathname } = useLocation()
   useEffect(() => {
@@ -17,7 +17,7 @@ function ScrollToTop() {
 }
 
 function App() {
-  // Empty initial notifications array - items get added when user clicks "Add to Cart"
+
   const [notifications, setNotifications] = useState([])
   const [toastMessage, setToastMessage] = useState(null)
 
@@ -31,7 +31,7 @@ function App() {
     }
     setNotifications((prev) => [newItem, ...prev])
 
-    // Show temporary toast message
+
     setToastMessage(`✓ Added "${product.title}" to Notifications!`)
     setTimeout(() => setToastMessage(null), 3000)
   }
@@ -40,17 +40,17 @@ function App() {
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between selection:bg-indigo-500 selection:text-white relative">
       <ScrollToTop />
 
-      {/* Floating Toast Notification */}
+
       {toastMessage && (
         <div className="fixed bottom-5 right-5 z-50 px-4 py-2.5 bg-indigo-600 text-white font-semibold text-xs rounded-xl shadow-2xl border border-indigo-400 animate-in fade-in slide-in-from-bottom-2 flex items-center gap-2">
           <span>{toastMessage}</span>
         </div>
       )}
       
-      {/* Sticky Header Navbar */}
+
       <Navbar notifications={notifications} setNotifications={setNotifications} />
 
-      {/* Main Content View Container */}
+
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home onAddToCart={addToCart} />} />
@@ -61,7 +61,7 @@ function App() {
         </Routes>
       </main>
 
-      {/* Footer */}
+
       <Footer />
     </div>
   )

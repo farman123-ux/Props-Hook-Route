@@ -5,23 +5,23 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden pt-10 pb-12 sm:pt-16 sm:pb-20 bg-slate-950">
       
-      {/* Glow Effects */}
+
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-600/15 blur-[140px] rounded-full pointer-events-none" />
       <div className="absolute top-1/3 left-1/4 w-[300px] h-[300px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-purple-500/10 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
-        {/* Title */}
+
         <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight max-w-3xl mx-auto">
           Learn <span className="bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">Props, Hooks & Routes</span> Easily
         </h1>
 
-        {/* Subtitle */}
+
         <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
           Master the 3 essential building blocks of React with simple definitions, clear code examples, and live interactive previews.
         </p>
 
-        {/* Buttons */}
+
         <div className="flex flex-wrap justify-center gap-3 pt-2">
           <RouterLink
             to="/props"
@@ -45,7 +45,7 @@ export default function Hero() {
           </RouterLink>
         </div>
 
-        {/* 3 Topic Cards */}
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-10 text-left">
           
           <RouterLink

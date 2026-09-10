@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link as RouterLink, NavLink } from 'react-router-dom'
 import { Search, Bell, Code2, BookOpen, Layers, Route as RouteIcon, Sparkles, X, ShoppingCart } from 'lucide-react'
 
-// Simple Database for Navbar Search
+
 const SEARCH_DATABASE = [
   { title: 'What is Props?', category: 'Props', path: '/props' },
   { title: 'How to use Props', category: 'Props', path: '/props' },
@@ -14,17 +14,17 @@ const SEARCH_DATABASE = [
 ]
 
 export default function Navbar({ notifications = [], setNotifications }) {
-  // Simple State
+
   const [searchQuery, setSearchQuery] = useState('')
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [isNotificationOpen, setIsNotificationOpen] = useState(false)
 
-  // Simple 1-line Search Filter
+
   const searchResults = searchQuery
     ? SEARCH_DATABASE.filter(item => item.title.toLowerCase().includes(searchQuery.toLowerCase()))
     : []
 
-  // Simple Notification Handlers
+
   const clearOne = (id) => {
     if (setNotifications) {
       setNotifications(notifications.filter(item => item.id !== id))
@@ -42,7 +42,7 @@ export default function Navbar({ notifications = [], setNotifications }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           
-          {/* Brand Logo */}
+
           <RouterLink to="/" className="flex items-center gap-2">
             <div className="p-2 rounded-xl bg-indigo-600 text-white font-bold">
               <Code2 className="w-5 h-5" />
@@ -55,7 +55,7 @@ export default function Navbar({ notifications = [], setNotifications }) {
             </div>
           </RouterLink>
 
-          {/* Navigation Links */}
+
           <nav className="hidden md:flex items-center gap-1">
             <NavLink
               to="/"
@@ -100,10 +100,10 @@ export default function Navbar({ notifications = [], setNotifications }) {
             </NavLink>
           </nav>
 
-          {/* Search Bar & Notification Bell */}
+
           <div className="flex items-center gap-3">
 
-            {/* Simple Search Bar */}
+
             <div className="relative">
               <div className="flex items-center">
                 <Search className="w-3.5 h-3.5 absolute left-3 text-slate-400" />
@@ -119,7 +119,7 @@ export default function Navbar({ notifications = [], setNotifications }) {
                 />
               </div>
 
-              {/* Search Results Dropdown */}
+
               {isSearchOpen && searchQuery && (
                 <div className="absolute right-0 mt-2 w-72 bg-slate-900 border border-slate-800 rounded-xl shadow-2xl p-2 z-50">
                   {searchResults.length > 0 ? (
@@ -146,7 +146,7 @@ export default function Navbar({ notifications = [], setNotifications }) {
               )}
             </div>
 
-            {/* Simple Notification Bell / Cart */}
+
             <div className="relative">
               <button
                 onClick={() => setIsNotificationOpen(!isNotificationOpen)}
@@ -155,7 +155,7 @@ export default function Navbar({ notifications = [], setNotifications }) {
                 <Bell className="w-4 h-4 text-indigo-400" />
               </button>
 
-              {/* Notifications Popover */}
+
               {isNotificationOpen && (
                 <div className="absolute right-0 mt-2 w-72 bg-slate-900 border border-slate-800 rounded-xl shadow-2xl overflow-hidden z-50">
                   <div className="p-3 bg-slate-950 border-b border-slate-800 flex justify-between items-center text-xs">

@@ -35,7 +35,7 @@ export default function ConceptCard({ title, description, icon: Icon, badge, lin
     <div className={`flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 backdrop-blur-sm transition-all duration-300 ${theme.border} hover:shadow-2xl hover:-translate-y-1 group`}>
       <div>
         
-        {/* Header */}
+
         <div className="flex items-center justify-between mb-5">
           <div className={`p-3 rounded-2xl border ${theme.iconBg} group-hover:scale-110 transition-transform`}>
             {Icon && <Icon className="w-6 h-6" />}
@@ -47,7 +47,7 @@ export default function ConceptCard({ title, description, icon: Icon, badge, lin
           )}
         </div>
 
-        {/* Content */}
+
         <h3 className="text-xl font-bold text-white mb-2">
           {title}
         </h3>
@@ -55,7 +55,7 @@ export default function ConceptCard({ title, description, icon: Icon, badge, lin
           {description}
         </p>
 
-        {/* Feature Bullet Points */}
+
         {features.length > 0 && (
           <ul className="space-y-2.5 mb-6 text-xs text-slate-300">
             {features.map((feat, i) => (
@@ -68,7 +68,7 @@ export default function ConceptCard({ title, description, icon: Icon, badge, lin
         )}
       </div>
 
-      {/* Buttons: Add to Cart + Learn More */}
+
       <div className="space-y-2 pt-2">
         {onAddToCart && (
           <button

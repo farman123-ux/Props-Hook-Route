@@ -10,10 +10,10 @@ export default function Home({ onAddToCart }) {
 
   return (
     <div className="space-y-12 sm:space-y-16 bg-slate-950 text-slate-100">
-      {/* Hero Section */}
+
       <Hero />
 
-      {/* Main Cards Section */}
+
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-8">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
@@ -72,7 +72,7 @@ export default function Home({ onAddToCart }) {
         </div>
       </section>
 
-      {/* Simplified Below Section Card */}
+
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 backdrop-blur-sm space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-4">
@@ -87,7 +87,7 @@ export default function Home({ onAddToCart }) {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            {/* Card 1: Props Live Input */}
+
             <div className="p-5 bg-slate-950 rounded-2xl border border-cyan-500/30 space-y-3">
               <div className="flex items-center justify-between">
                 <h4 className="text-xs font-bold text-cyan-400 flex items-center gap-1.5">
@@ -117,7 +117,7 @@ export default function Home({ onAddToCart }) {
               </div>
             </div>
 
-            {/* Card 2: Hooks Live Counter */}
+
             <div className="p-5 bg-slate-950 rounded-2xl border border-emerald-500/30 space-y-3">
               <div className="flex items-center justify-between">
                 <h4 className="text-xs font-bold text-emerald-400 flex items-center gap-1.5">

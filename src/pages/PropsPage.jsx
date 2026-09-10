@@ -5,7 +5,7 @@ import { Link as RouterLink } from 'react-router-dom'
 export default function PropsPage({ onAddToCart }) {
   const [copiedExample, setCopiedExample] = useState(null)
 
-  // Interactive Live Card State
+
   const [name, setName] = useState('Farman')
   const [role, setRole] = useState('Developer')
 
@@ -40,12 +40,12 @@ function Button(props) {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10 bg-slate-950 text-slate-100">
       
-      {/* Back button */}
+
       <RouterLink to="/" className="inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-white font-medium">
         <ArrowLeft className="w-3.5 h-3.5" /> Back to Home
       </RouterLink>
 
-      {/* Header */}
+
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="space-y-2">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 text-xs font-semibold">
@@ -64,7 +64,7 @@ function Button(props) {
         )}
       </div>
 
-      {/* Simple Definition */}
+
       <section className="p-5 rounded-2xl bg-slate-900/80 border border-cyan-500/30 space-y-1 backdrop-blur-sm">
         <h2 className="text-base font-bold text-cyan-300">What is Props?</h2>
         <p className="text-xs text-slate-200 leading-relaxed">
@@ -72,13 +72,13 @@ function Button(props) {
         </p>
       </section>
 
-      {/* Exactly Two Examples */}
+
       <section className="space-y-5">
         <h2 className="text-xl font-bold text-white">Two Simple Examples</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           
-          {/* Example 1 */}
+
           <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-bold text-cyan-400">1. Passing Data</h3>
@@ -97,7 +97,7 @@ function Button(props) {
             </div>
           </div>
 
-          {/* Example 2 */}
+
           <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-bold text-cyan-400">2. Passing Functions</h3>
@@ -119,7 +119,7 @@ function Button(props) {
         </div>
       </section>
 
-      {/* Clean Interactive Demo */}
+
       <section className="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-5">
         <div className="border-b border-slate-800 pb-3 flex items-center justify-between">
           <div>
@@ -141,7 +141,7 @@ function Button(props) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-          {/* Inputs */}
+
           <div className="space-y-3 bg-slate-950 p-4 rounded-xl border border-slate-800">
             <div>
               <label className="text-xs text-slate-300 block mb-1">Name Prop:</label>
@@ -163,7 +163,7 @@ function Button(props) {
             </div>
           </div>
 
-          {/* Rendered Card */}
+
           <div className="p-5 rounded-2xl bg-gradient-to-br from-slate-900 to-cyan-950/40 border border-cyan-500/40 text-center space-y-2 shadow-lg shadow-cyan-500/10">
             <span className="text-[10px] text-cyan-400 block font-mono">Rendered Child Card Component</span>
             <h3 className="text-lg font-bold text-white">{name || 'User'}</h3>

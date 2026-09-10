@@ -6,7 +6,7 @@ export default function RoutesPage({ onAddToCart }) {
   const [copiedExample, setCopiedExample] = useState(null)
   const navigate = useNavigate()
 
-  // Interactive Route Simulator state
+
   const [simulatedPath, setSimulatedPath] = useState('/props')
 
   const copyCode = (code, id) => {
@@ -41,12 +41,12 @@ function User() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10 bg-slate-950 text-slate-100">
       
-      {/* Back button */}
+
       <RouterLink to="/" className="inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-white font-medium">
         <ArrowLeft className="w-3.5 h-3.5" /> Back to Home
       </RouterLink>
 
-      {/* Header */}
+
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="space-y-2">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20 text-xs font-semibold">
@@ -65,7 +65,7 @@ function User() {
         )}
       </div>
 
-      {/* Simple Definition */}
+
       <section className="p-5 rounded-2xl bg-slate-900/80 border border-purple-500/30 space-y-1 backdrop-blur-sm">
         <h2 className="text-base font-bold text-purple-300">What is React Router?</h2>
         <p className="text-xs text-slate-200 leading-relaxed">
@@ -73,13 +73,13 @@ function User() {
         </p>
       </section>
 
-      {/* Exactly Two Super Simple Examples */}
+
       <section className="space-y-5">
         <h2 className="text-xl font-bold text-white">Two Simple Examples</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           
-          {/* Example 1 */}
+
           <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-bold text-purple-400">1. Link Navigation</h3>
@@ -98,7 +98,7 @@ function User() {
             </div>
           </div>
 
-          {/* Example 2 */}
+
           <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-bold text-purple-400">2. Dynamic URL Params</h3>
@@ -120,7 +120,7 @@ function User() {
         </div>
       </section>
 
-      {/* Clean Interactive Demo */}
+
       <section className="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-5">
         <div className="border-b border-slate-800 pb-3 flex items-center justify-between">
           <div>
@@ -143,14 +143,14 @@ function User() {
 
         <div className="space-y-4">
           
-          {/* Address Bar */}
+
           <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 flex items-center gap-2 text-xs font-mono">
             <Globe className="w-4 h-4 text-purple-400" />
             <span className="text-slate-500">https://myapp.com</span>
             <span className="text-purple-300 font-bold">{simulatedPath}</span>
           </div>
 
-          {/* Quick Buttons */}
+
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setSimulatedPath('/')}
