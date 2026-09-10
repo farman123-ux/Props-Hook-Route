@@ -61,9 +61,6 @@ function Header() {
 
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="space-y-2">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 text-xs font-semibold">
-            <Layers className="w-3.5 h-3.5 text-emerald-400" /> Lesson 2: Hooks
-          </div>
           <h1 className="text-3xl font-extrabold text-white">React Hooks</h1>
         </div>
 

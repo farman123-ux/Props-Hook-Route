@@ -48,9 +48,6 @@ function Button(props) {
 
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="space-y-2">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 text-xs font-semibold">
-            <BookOpen className="w-3.5 h-3.5 text-cyan-400" /> Lesson 1: Props
-          </div>
           <h1 className="text-3xl font-extrabold text-white">React Props</h1>
         </div>
 
