@@ -3,11 +3,8 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import ProductCard from './components/ProductCard'
 import Footer from './components/Footer'
-import { Layers, Sparkles, Filter, CheckCircle2 } from 'lucide-react'
+import { Layers, Filter, CheckCircle2 } from 'lucide-react'
 
-// ===================================================================
-// 1. INITIAL DATA: List of available store products
-// ===================================================================
 const PRODUCTS_DATA = [
   {
     id: 1,
@@ -72,9 +69,6 @@ const PRODUCTS_DATA = [
 ]
 
 export default function App() {
-  // ===================================================================
-  // 2. STATE HOOKS (useState): Stores application data that can change
-  // ===================================================================
   const [products] = useState(PRODUCTS_DATA)
   const [cart, setCart] = useState([])
   const [selectedCategory, setSelectedCategory] = useState('All')
@@ -82,30 +76,19 @@ export default function App() {
   const [toastMessage, setToastMessage] = useState(null)
   const [flashSaleSeconds, setFlashSaleSeconds] = useState(60)
 
-  // ===================================================================
-  // 3. EFFECT HOOK (useEffect): Runs countdown timer side effect
-  // ===================================================================
   useEffect(() => {
-    // Start interval timer
     const interval = setInterval(() => {
       setFlashSaleSeconds((prev) => (prev > 0 ? prev - 1 : 60))
     }, 1000)
 
-    // Cleanup interval when component unmounts
     return () => clearInterval(interval)
   }, [])
 
-  // ===================================================================
-  // 4. CART LOGIC (Simple and easy to read)
-  // ===================================================================
-  
-  // Add item to cart (or increase quantity if already in cart)
   const handleAddToCart = (product, quantity = 1) => {
     setCart((prevCart) => {
       const existingItem = prevCart.find((item) => item.id === product.id)
       
       if (existingItem) {
-        // If already in cart, increment quantity
         return prevCart.map((item) =>
           item.id === product.id
             ? { ...item, quantity: item.quantity + quantity }
@@ -113,28 +96,21 @@ export default function App() {
         )
       }
       
-      // If new item, add to array
       return [...prevCart, { ...product, quantity }]
     })
 
-    // Show quick toast notification
     setToastMessage(`Added ${quantity}x "${product.title}" to cart!`)
     setTimeout(() => setToastMessage(null), 2500)
   }
 
-  // Remove an item from cart by ID
   const handleRemoveFromCart = (id) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== id))
   }
 
-  // Clear all items in cart
   const handleClearCart = () => {
     setCart([])
   }
 
-  // ===================================================================
-  // 5. FILTER LOGIC: Filter products by Category and Search Text
-  // ===================================================================
   const filteredProducts = products.filter((product) => {
     const matchesCategory =
       selectedCategory === 'All' || product.category === selectedCategory
@@ -150,15 +126,12 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between selection:bg-indigo-500 selection:text-white relative">
-      
-      {/* Toast Notification Alert */}
       {toastMessage && (
         <div className="fixed bottom-5 right-5 z-50 px-4 py-2.5 bg-indigo-600 text-white font-semibold text-xs rounded-xl shadow-2xl border border-indigo-400 flex items-center gap-2">
           <span>✓ {toastMessage}</span>
         </div>
       )}
 
-      {/* 1. NAVBAR COMPONENT: Passes cart & search props */}
       <Navbar
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
@@ -167,13 +140,9 @@ export default function App() {
         onClearCart={handleClearCart}
       />
 
-      {/* 2. HERO COMPONENT: Passes timer prop */}
       <Hero flashSaleSeconds={flashSaleSeconds} />
 
-      {/* 3. MAIN STORE SECTION */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10 flex-grow w-full">
-        
-        {/* Header & Category Buttons */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white">
@@ -181,7 +150,6 @@ export default function App() {
             </h2>
           </div>
 
-          {/* Category Filter Pills (Controlled via useState) */}
           <div className="flex flex-wrap items-center gap-1.5 p-1.5 bg-slate-900 rounded-2xl border border-slate-800">
             {categories.map((cat) => (
               <button
@@ -199,7 +167,6 @@ export default function App() {
           </div>
         </div>
 
-        {/* Product Grid: Passes each product + onAddToCart callback via PROPS */}
         {filteredProducts.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {filteredProducts.map((product) => (
@@ -229,7 +196,6 @@ export default function App() {
           </div>
         )}
 
-        {/* Concept Explanations: Clear & Simple React Learning Section */}
         <section className="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 space-y-6 mt-12">
           <div className="flex items-center gap-3">
             <div className="p-3 rounded-2xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/30">
@@ -246,8 +212,6 @@ export default function App() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            
-            {/* Concept 1: Props */}
             <div className="p-5 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
               <div className="flex items-center gap-2 text-cyan-400 font-bold text-sm">
                 <CheckCircle2 className="w-4 h-4" /> 1. Props (Passing Data)
@@ -259,7 +223,6 @@ export default function App() {
               </p>
             </div>
 
-            {/* Concept 2: useState */}
             <div className="p-5 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
               <div className="flex items-center gap-2 text-emerald-400 font-bold text-sm">
                 <CheckCircle2 className="w-4 h-4" /> 2. useState (State)
@@ -271,7 +234,6 @@ export default function App() {
               </p>
             </div>
 
-            {/* Concept 3: useEffect */}
             <div className="p-5 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
               <div className="flex items-center gap-2 text-purple-400 font-bold text-sm">
                 <CheckCircle2 className="w-4 h-4" /> 3. useEffect (Side Effects)
@@ -281,13 +243,10 @@ export default function App() {
                 <code className="text-purple-300">clearInterval</code>.
               </p>
             </div>
-
           </div>
         </section>
-
       </main>
 
-      {/* 4. FOOTER */}
       <Footer />
     </div>
   )
