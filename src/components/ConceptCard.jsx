@@ -38,7 +38,7 @@ export default function ConceptCard({ title, description, icon: Icon, badge, lin
 
         <div className="flex items-center justify-between mb-5">
           <div className={`p-3 rounded-2xl border ${theme.iconBg} group-hover:scale-110 transition-transform`}>
-            {Icon && <Icon className="w-6 h-6" />}
+         {Icon && <Icon className="w-6 h-6" />}
           </div>
           {badge && (
             <span className={`text-xs px-3 py-1 rounded-full font-mono border ${theme.badge}`}>
